@@ -26,8 +26,8 @@ class InvoiceFactory extends Factory
             'customer_id' => Customer::factory(), 
             'amount' => $this->faker->numberBetween(100, 20000),
             'status' => $status,
-            'billed_date' => $this->faker->dateTimeThisDecade,
-            'paid_date'=> $status == 'P' ? $this-faker-dateTimeThisDecade() : NULL
+            'billed_date' => $this->faker->dateTimeThisDecade(),
+            'paid_date'=> $status == 'P' ? $this->faker->dateTimeThisDecade() : NULL
         ];
     }
 }
